@@ -451,9 +451,9 @@ function App() {
                 <a href="https://github.com/" target="_blank" rel="noreferrer">
                   <Github size={17} /> GitHub
                 </a>
-                <a href="/resume.pdf" download>
+                {/* <a href="/resume.pdf" download>
                   <Download size={17} /> Resume
-                </a>
+                </a> */}
               </div>
               <a href="#home">Back to top â†‘</a>
             </div>
