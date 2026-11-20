@@ -1,3 +1,4 @@
+﻿import ProjectCaseStudy from "./components/ProjectCaseStudy";
 import React from "react";
 import { createRoot } from "react-dom/client";
 import {
@@ -19,17 +20,17 @@ const projects = [
   {
     id: "01",
     name: "Smart HMI Infotainment Ecosystem",
-    type: "Automotive UI/UX · HMI Design",
+    type: "Automotive UI/UX Â· HMI Design",
     year: "2026",
     description:
       "A retro-modern digital cockpit experience for custom electric vehicle conversions, balancing expressive aesthetics with driver readability.",
-    tags: ["Figma", "Unity", "1920 × 720"],
+    tags: ["Figma", "Unity", "1920 Ã— 720"],
     art: "hmi",
   },
   {
     id: "02",
     name: "Sport Analytics Pro",
-    type: "Product Design · Full-Stack Development",
+    type: "Product Design Â· Full-Stack Development",
     year: "2025",
     description:
       "An interactive sports analytics platform that turns complex player and team performance data into clear, actionable insights.",
@@ -39,7 +40,7 @@ const projects = [
   {
     id: "03",
     name: "Credit Card Navigation",
-    type: "Web Application · Frontend Development",
+    type: "Web Application Â· Frontend Development",
     year: "2025",
     description:
       "A streamlined credit card comparison experience designed to help users explore options and make informed choices.",
@@ -49,7 +50,7 @@ const projects = [
   {
     id: "04",
     name: "Enterprise SMS Platform",
-    type: "Backend Engineering · API Development",
+    type: "Backend Engineering Â· API Development",
     year: "2023",
     description:
       "A scalable enterprise messaging solution built to simplify automated communication workflows.",
@@ -63,7 +64,7 @@ function Art({ type }) {
       <div className="art hmi-art">
         <div className="dashboard">
           <div className="dash-top">
-            V / MOTION <span>DRIVE MODE · ECO</span>
+            V / MOTION <span>DRIVE MODE Â· ECO</span>
           </div>
           <div className="dash-main">
             <div className="gauge">
@@ -73,7 +74,7 @@ function Art({ type }) {
             </div>
             <div className="road">
               <div className="road-line" />
-              <div className="car">◆</div>
+              <div className="car">â—†</div>
             </div>
             <div className="gauge">
               <span>SPEED</span>
@@ -82,7 +83,7 @@ function Art({ type }) {
             </div>
           </div>
           <div className="dash-bottom">
-            ◉ &nbsp; 82% BATTERY <span>21°C &nbsp; · &nbsp; 10:42 AM</span>
+            â—‰ &nbsp; 82% BATTERY <span>21Â°C &nbsp; Â· &nbsp; 10:42 AM</span>
           </div>
         </div>
       </div>
@@ -92,25 +93,25 @@ function Art({ type }) {
       <div className="art sports-art">
         <div className="sports-window">
           <div className="mock-side">
-            S<span>⌂</span>
-            <span>▥</span>
-            <span>◫</span>
+            S<span>âŒ‚</span>
+            <span>â–¥</span>
+            <span>â—«</span>
           </div>
           <div className="sports-content">
             <div className="mock-eyebrow">
-              PERFORMANCE OVERVIEW <span>2025 SEASON ↗</span>
+              PERFORMANCE OVERVIEW <span>2025 SEASON â†—</span>
             </div>
             <h3>Team analytics</h3>
             <div className="stats">
               <div>
                 <small>Win rate</small>
                 <b>78.4%</b>
-                <em>↗ 12.8%</em>
+                <em>â†— 12.8%</em>
               </div>
               <div>
                 <small>Avg. points</small>
                 <b>86.2</b>
-                <em>↗ 5.3%</em>
+                <em>â†— 5.3%</em>
               </div>
               <div>
                 <small>Matches</small>
@@ -132,13 +133,13 @@ function Art({ type }) {
       <div className="art cards-art">
         <div className="credit-card cc-back">
           <span>VISA</span>
-          <strong>•••• 4821</strong>
+          <strong>â€¢â€¢â€¢â€¢ 4821</strong>
         </div>
         <div className="credit-card cc-front">
           <div>
-            n<span>●</span>va.
+            n<span>â—</span>va.
           </div>
-          <strong>•••• &nbsp; •••• &nbsp; 2048</strong>
+          <strong>â€¢â€¢â€¢â€¢ &nbsp; â€¢â€¢â€¢â€¢ &nbsp; 2048</strong>
           <small>PREMIUM REWARDS</small>
         </div>
         <div className="card-caption">
@@ -150,19 +151,19 @@ function Art({ type }) {
     <div className="art sms-art">
       <div className="sms-window">
         <div className="sms-heading">
-          <span className="sms-dot">✳</span> Messages <span>•••</span>
+          <span className="sms-dot">âœ³</span> Messages <span>â€¢â€¢â€¢</span>
         </div>
         <div className="bubble b1">Your verification code is ready.</div>
-        <div className="bubble b2">Thanks! Message received ✓✓</div>
+        <div className="bubble b2">Thanks! Message received âœ“âœ“</div>
         <div className="bubble b3">
-          Campaign delivered successfully. <span>↗</span>
+          Campaign delivered successfully. <span>â†—</span>
         </div>
         <div className="sms-compose">
-          Write a message... <span>➤</span>
+          Write a message... <span>âž¤</span>
         </div>
       </div>
       <div className="floating-stat">
-        ↗ <strong>98.7%</strong>
+        â†— <strong>98.7%</strong>
         <small>Delivery rate</small>
       </div>
     </div>
@@ -182,6 +183,13 @@ function App() {
     window.scrollTo(0, 0);
   };
 
+  if (
+    activePage === "sports" ||
+    activePage === "cards" ||
+    activePage === "sms"
+  ) {
+    return <ProjectCaseStudy project={activePage} onBack={goHome} />;
+  }
   if (activePage === "hmi") {
     return <HMICaseStudy onBack={goHome} />;
   }
@@ -222,7 +230,7 @@ function App() {
             <span className="eyebrow">
               <span className="green-dot" /> AVAILABLE FOR OPPORTUNITIES
             </span>
-            <span className="location">BASED IN WINDSOR, CANADA ↗</span>
+            <span className="location">BASED IN WINDSOR, CANADA â†—</span>
           </div>
           <h1>
             Designing with
@@ -263,20 +271,35 @@ function App() {
               <article
                 className="project"
                 key={p.id}
-                onClick={p.id === "01" ? openCaseStudy : undefined}
+                role="button"
+                tabIndex={0}
+                aria-label={`View ${p.name} case study`}
+                onClick={() => {
+                  const pages = {
+                    "01": "hmi",
+                    "02": "sports",
+                    "03": "cards",
+                    "04": "sms",
+                  };
+
+                  setActivePage(pages[p.id]);
+                  window.scrollTo(0, 0);
+                }}
                 onKeyDown={(e) => {
-                  if (p.id === "01" && (e.key === "Enter" || e.key === " ")) {
+                  if (e.key === "Enter" || e.key === " ") {
                     e.preventDefault();
-                    openCaseStudy();
+
+                    const pages = {
+                      "01": "hmi",
+                      "02": "sports",
+                      "03": "cards",
+                      "04": "sms",
+                    };
+
+                    setActivePage(pages[p.id]);
+                    window.scrollTo(0, 0);
                   }
                 }}
-                role={p.id === "01" ? "button" : undefined}
-                tabIndex={p.id === "01" ? 0 : undefined}
-                aria-label={
-                  p.id === "01"
-                    ? "View Smart HMI Infotainment Ecosystem case study"
-                    : undefined
-                }
               >
                 <Art type={p.art} />
                 <div className="project-meta">
@@ -326,12 +349,14 @@ function App() {
                 <div>
                   <PenTool size={22} />
                   <strong>Design</strong>
-                  <span>UI/UX · Figma · HMI · Prototyping · Unity</span>
+                  <span>UI/UX Â· Figma Â· HMI Â· Prototyping Â· Unity</span>
                 </div>
                 <div>
                   <Code2 size={22} />
                   <strong>Development</strong>
-                  <span>React · Next.js · TypeScript · Node.js · Python</span>
+                  <span>
+                    React Â· Next.js Â· TypeScript Â· Node.js Â· Python
+                  </span>
                 </div>
               </div>
             </div>
@@ -348,10 +373,10 @@ function App() {
           </div>
           <div className="timeline">
             <div className="timeline-row">
-              <span>JAN — APR 2026</span>
+              <span>JAN â€” APR 2026</span>
               <div>
                 <h3>UI Designer</h3>
-                <p>Ottawa Infotainment · Remote</p>
+                <p>Ottawa Infotainment Â· Remote</p>
                 <small>
                   Designed high-fidelity automotive digital clusters and
                   infotainment interfaces in Figma, and developed interactive
@@ -361,10 +386,10 @@ function App() {
               <span className="timeline-type">EXPERIENCE</span>
             </div>
             <div className="timeline-row">
-              <span>JAN — APR 2023</span>
+              <span>JAN â€” APR 2023</span>
               <div>
                 <h3>Node.js Intern</h3>
-                <p>Atyantik Technologies · Vadodara, India</p>
+                <p>Atyantik Technologies Â· Vadodara, India</p>
                 <small>
                   Contributed to backend development, API integration, and
                   performance improvements alongside senior engineers.
@@ -373,18 +398,18 @@ function App() {
               <span className="timeline-type">EXPERIENCE</span>
             </div>
             <div className="timeline-row">
-              <span>2025 — 2026</span>
+              <span>2025 â€” 2026</span>
               <div>
                 <h3>Master of Applied Computing</h3>
-                <p>University of Windsor · Canada</p>
+                <p>University of Windsor Â· Canada</p>
               </div>
               <span className="timeline-type">EDUCATION</span>
             </div>
             <div className="timeline-row">
-              <span>2019 — 2023</span>
+              <span>2019 â€” 2023</span>
               <div>
                 <h3>Bachelor in Computer Engineering</h3>
-                <p>Gujarat Technological University · India</p>
+                <p>Gujarat Technological University Â· India</p>
               </div>
               <span className="timeline-type">EDUCATION</span>
             </div>
@@ -411,7 +436,7 @@ function App() {
               </a>
             </div>
             <div className="footer">
-              <span>© {new Date().getFullYear()} Vishwesh Patel</span>
+              <span>Â© {new Date().getFullYear()} Vishwesh Patel</span>
               <div>
                 <a href="mailto:vishweshpatel0311@gmail.com">
                   <Mail size={17} /> Email
@@ -430,7 +455,7 @@ function App() {
                   <Download size={17} /> Resume
                 </a>
               </div>
-              <a href="#home">Back to top ↑</a>
+              <a href="#home">Back to top â†‘</a>
             </div>
           </div>
         </section>

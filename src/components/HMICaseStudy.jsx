@@ -89,6 +89,186 @@ export default function HMICaseStudy({ onBack }) {
             of vehicle information.
           </p>
         </div>
+        {/* Design Challenge */}
+        <section className="case-process">
+          <div className="case-process-heading">
+            <span className="eyebrow">02 / DESIGN THINKING</span>
+
+            <h2>
+              The challenge<span className="period">.</span>
+            </h2>
+          </div>
+
+          <div className="case-process-content">
+            <p className="case-lead">
+              How can we bring modern digital experiences into classic vehicles
+              without compromising readability, usability, or character?
+            </p>
+
+            <p>
+              Designing automotive interfaces requires balancing visual
+              aesthetics with practical interaction needs. Vehicle information
+              must remain clear, organized, and easy to interpret across
+              different driving conditions.
+            </p>
+
+            <div className="case-challenge-grid">
+              <div>
+                <span>01 / READABILITY</span>
+                <h3>Information clarity</h3>
+                <p>
+                  Establish a clear visual hierarchy for essential driving
+                  information, including speed, battery level, and vehicle
+                  status.
+                </p>
+              </div>
+
+              <div>
+                <span>02 / ERGONOMICS</span>
+                <h3>Driver-focused layout</h3>
+                <p>
+                  Organize information to support quick recognition and reduce
+                  unnecessary visual complexity.
+                </p>
+              </div>
+
+              <div>
+                <span>03 / AESTHETICS</span>
+                <h3>Retro meets modern</h3>
+                <p>
+                  Explore a visual language that respects classic vehicle
+                  character while introducing contemporary digital UI.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        {/* Design Approach */}
+<section className="case-approach">
+  <div className="case-approach-header">
+    <span className="eyebrow">
+      03 / DESIGN APPROACH
+    </span>
+
+    <h2>
+      Designed around
+      <br />
+      the driver<span className="period">.</span>
+    </h2>
+
+    <p>
+      A thoughtful automotive interface starts with
+      understanding what information matters most
+      and how drivers interact with it.
+    </p>
+  </div>
+
+  <div className="case-approach-grid">
+    <div className="approach-item">
+      <span className="approach-number">01</span>
+      <h3>Information hierarchy</h3>
+      <p>
+        Prioritize essential driving information such
+        as speed, battery status, and range, while
+        keeping secondary controls visually organized.
+      </p>
+    </div>
+
+    <div className="approach-item">
+      <span className="approach-number">02</span>
+      <h3>Human-centered interaction</h3>
+      <p>
+        Explore clear navigation, recognizable icons,
+        and simplified interactions that support
+        usability within an automotive environment.
+      </p>
+    </div>
+
+    <div className="approach-item">
+      <span className="approach-number">03</span>
+      <h3>Visual consistency</h3>
+      <p>
+        Establish consistent typography, spacing,
+        colors, and interface components to create
+        a cohesive digital cockpit experience.
+      </p>
+    </div>
+
+    <div className="approach-item">
+      <span className="approach-number">04</span>
+      <h3>Responsive interface thinking</h3>
+      <p>
+        Consider how layouts adapt to different
+        dashboard dimensions and display configurations
+        while maintaining clarity and balance.
+      </p>
+    </div>
+  </div>
+</section>
+{/* Key Takeaways */}
+<section className="case-conclusion">
+  <div className="case-conclusion-header">
+    <span className="eyebrow">
+      04 / KEY TAKEAWAYS
+    </span>
+
+    <h2>
+      Thoughtful design.
+      <br />
+      Better experiences<span className="period">.</span>
+    </h2>
+  </div>
+
+  <div className="case-conclusion-content">
+    <p className="case-conclusion-lead">
+      Great automotive interfaces are not simply
+      about visual appeal. They are about presenting
+      the right information at the right moment.
+    </p>
+
+    <p>
+      This case study highlights the importance of
+      clear information hierarchy, consistent visual
+      systems, and driver-focused interaction design
+      when exploring modern digital cockpit experiences.
+    </p>
+
+    <div className="case-takeaways">
+      <div>
+        <span>01</span>
+        <p>
+          Prioritize clarity over unnecessary
+          visual complexity.
+        </p>
+      </div>
+
+      <div>
+        <span>02</span>
+        <p>
+          Balance modern technology with the
+          character of classic vehicles.
+        </p>
+      </div>
+
+      <div>
+        <span>03</span>
+        <p>
+          Design adaptable interface systems
+          with consistent visual principles.
+        </p>
+      </div>
+    </div>
+
+    <button
+      type="button"
+      className="case-return-button"
+      onClick={onBack}
+    >
+      Back to all projects
+      <ArrowUpRight size={20} />
+    </button>
+  </div>
+</section>
       </section>
     </main>
   );
